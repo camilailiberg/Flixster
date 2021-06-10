@@ -42,15 +42,10 @@ body {
 	margin-top: 20px;
 	background-color: rgb(95, 95, 96);
 }
-.individual-movie {
-}
 .moviePoster {
 	height: 200px;
 	width: 200px;
 	padding: 10px;
-}
-.title-and-rating {
-	display: flex;
 }
 
 .footer {
