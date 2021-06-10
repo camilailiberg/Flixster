@@ -5,23 +5,98 @@ body {
 	font-family: "Public Sans", sans-serif;
 }
 
+.modal {
+	position: fixed; /* as the user scrols up and dow i want the modal to follow the user always*/
+
+	/* thi will make the modal completelly centered */
+	/* top and left corner of our modal will be centered of the screen */
+	top: 50%;
+	left: 50%;
+	/* to get modal completelly center in the screen we do transform. What the 50% corresponds to the 50% of the sixe of the container as suppoused of the size of the creen */
+	transform: translate(-50%, -50%) scale(0); /* scale(0) means it will have a scale of 0, which in turns means that modal will be invisible */
+	/* thi will make the modal completelly centered */
+	transition: 200ms ease-in-out; /* makes modal gradually fade away */
+	/* border: 1px solid white; */
+	border-radius: 10px;
+	z-index: 10; /* this is for our modal to be on top of everything else, which is why we gve it a high z-index */
+
+	/* background-color: rgba(0, 0, 0, 0.1); */
+	/* we need to set a background color because we want the modal to stand out from the back of our overlay */
+	width: 95%;
+	/* max-width: 95%; */
+	/* the modal will never be larger than 80% of our screen */
+	height: 95%;
+	/* max-height: 95%; */
+	/* the modal will never be taller than 80% of our screen */
+}
+.modal.active {
+	transform: translate(-50%, -50%) scale(1);
+}
+.modal-header {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+.modal-header .modal-title {
+	font-size: 3rem;
+	font-weight: bold;
+	color: black;
+}
+.modal-header .close-modal-button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	color: black;
+	font-size: 3rem;
+	font-weight: bold;
+}
+.modal-body {
+	padding: 10px 15px;
+	font-size: 1.5rem;
+	color: black;
+}
+
 .flex-container {
 	display: flex;
 	flex-direction: column;
 }
 
+#overlay {
+	position: fixed;
+	opacity: 0;
+	transition: 200ms ease-in-out; /* makes opacity gradually fade away */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.9);
+	pointer-events: none; /* when our overlay is visible, this makes it so that our overlay won't disable our click events */
+}
+#overlay.active {
+	/* this way we can automatically toggle and untoggle our overlay */
+	opacity: 1;
+	pointer-events: all;
+}
+
 .image-title-searchbar {
 	display: flex;
 	justify-content: flex-start;
+	border-bottom: 1px solid white;
+	padding: 20px;
+	align-items: center;
 }
 .popcorn {
-	width: 60px;
-	height: 60px;
+	width: 90px;
+	height: 90px;
 	padding: 20px 10px 0 0;
 }
 .name {
 	text-align: center;
 	padding: 20px 20px 0 0;
+	font-size: 4rem;
 }
 .form {
 	display: flex;
@@ -29,21 +104,39 @@ body {
 	align-items: center;
 	padding: 20px 0px 0 0;
 }
+.search-input {
+	height: 40px;
+	padding-right: 220px;
+	margin-right: 20px;
+	font-size: 1.6rem;
+}
+.search-button {
+	height: 50px;
+	align-self: center;
+	font-size: 1.5rem;
+	padding-left: 20px;
+	text-align: center;
+}
 
 .type-showing {
-	padding: 0 0 0 40px; /* top right bottom left */
+	padding: 20px 0px 0px 60px; /* top right bottom left */
 }
 
 .content {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-start;
-	padding: 50px;
+	justify-content: center;
+	padding: 0 50px 50px 50px;
 	margin-top: 20px;
 }
-.individual-movie {
+.individial-movie {
 	display: flex;
 	flex-direction: column;
+	/* background-color: aquamarine; */
+	margin: 40px;
+	justify-content: space-between;
+}
+.more-info-btn {
 }
 .moviePoster {
 	height: 200px;
@@ -52,10 +145,11 @@ body {
 }
 .name-rating {
 	display: flex;
-	align-items: baseline;
+	/* align-items: baseline; */
 	margin: 10px;
 	width: 200px;
-	justify-content: space-between;
+	justify-content: flex-start;
+	flex-direction: column;
 }
 .star-and-rating {
 	display: flex;
@@ -67,6 +161,9 @@ body {
 	width: 20px;
 	height: 20px;
 	justify-content: space-between;
+}
+
+.movie-details {
 }
 
 .load-more {
@@ -82,7 +179,7 @@ body {
 	justify-content: center;
 	padding: 50px;
 	height: 90%;
-	bottom: 0;
+	position: bottom;
 }
 .logo {
 	height: 100px;
@@ -94,5 +191,3 @@ body {
 .hidden {
 	display: none;
 }
-/* .search-button {
-} */
