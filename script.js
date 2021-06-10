@@ -134,7 +134,7 @@ async function loadMore() {
                     <h3>${element.vote_average}</h3>
                 </div>
             </div>
-			<button class="btn btn-light more-info-btn" data-modal-target="#${element.id}">More Info</button>
+			<button class="btn btn-light more-info-btn">More Info</button>
         </div>
 		`;
 	});
@@ -221,6 +221,7 @@ async function runSearch(movie, baseImageURL) {
                     <img class="star-rating" src="/images/star.png" alt="star-rating" />
                     <h3>${element.vote_average}</h3>
                 </div>
+				<button class="btn btn-light more-info-btn" data-modal-target="#${element.id}">More Info</button>
             </div>
         </div>
     `;
