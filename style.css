@@ -40,12 +40,41 @@ body {
 	justify-content: flex-start;
 	padding: 50px;
 	margin-top: 20px;
-	background-color: rgb(95, 95, 96);
+}
+.individual-movie {
+	display: flex;
+	flex-direction: column;
 }
 .moviePoster {
 	height: 200px;
 	width: 200px;
 	padding: 10px;
+}
+.name-rating {
+	display: flex;
+	align-items: baseline;
+	margin: 10px;
+	width: 200px;
+	justify-content: space-between;
+}
+.star-and-rating {
+	display: flex;
+	align-items: baseline;
+	padding-right: 20px;
+}
+.star-rating {
+	display: flex;
+	width: 20px;
+	height: 20px;
+	justify-content: space-between;
+}
+
+.load-more {
+	display: flex;
+	justify-content: center;
+	padding: 20px 0 20px 0;
+}
+.load-more-button {
 }
 
 .footer {
