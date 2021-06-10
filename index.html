@@ -26,7 +26,7 @@
 				<div class="form">
 					<form id="movieForm">
 						<input name="movieName" required="required" type="text" />
-						<button type="submit">Search</button>
+						<button class="search-button" type="submit">Search</button>
 					</form>
 				</div>
 			</div>
@@ -36,7 +36,15 @@
 			<div class="content"></div>
 
 			<div class="load-more">
-				<button onclick="loadMore()" class="load-more-button">Load More</button>
+				<button onclick="loadMore()" class="load-more-button general">
+					Load More
+				</button>
+				<button
+					onclick="loadMoreSpecific()"
+					class="load-more-button specific hidden"
+				>
+					Load More
+				</button>
 			</div>
 
 			<div class="footer">

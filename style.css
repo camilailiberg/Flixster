@@ -90,3 +90,9 @@ body {
 	justify-content: center;
 	padding-left: 20px;
 }
+
+.hidden {
+	display: none;
+}
+.search-button {
+}
