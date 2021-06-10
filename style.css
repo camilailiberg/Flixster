@@ -1,0 +1,68 @@
+body {
+	background-color: rgba(31, 34, 62, 0.969);
+	color: white;
+	font-family: "Alfa Slab One", cursive;
+	font-family: "Public Sans", sans-serif;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.image-title-searchbar {
+	display: flex;
+	justify-content: flex-start;
+}
+.popcorn {
+	width: 60px;
+	height: 60px;
+	padding: 20px 10px 0 0;
+}
+.name {
+	text-align: center;
+	padding: 20px 20px 0 0;
+}
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0px 0 0;
+}
+
+.type-showing {
+	padding: 0 0 0 40px; /* top right bottom left */
+}
+
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 50px;
+	margin-top: 20px;
+	background-color: rgb(95, 95, 96);
+}
+.individual-movie {
+}
+.moviePoster {
+	height: 200px;
+	width: 200px;
+	padding: 10px;
+}
+.title-and-rating {
+	display: flex;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	padding: 50px;
+	height: 90%;
+	bottom: 0;
+}
+.logo {
+	height: 100px;
+	width: 100px;
+	justify-content: center;
+	padding-left: 20px;
+}
