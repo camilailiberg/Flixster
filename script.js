@@ -54,20 +54,28 @@ async function runSearch(movie, baseImageURL) {
 
 // document.addEventListener("DOMContentLoaded", getConfig);
 
-// window.onload = async function (event) {
-// 	const nowPlayingApiURL = `${baseURL}movie/now_playing?api_key=${apiKey}&language=en-US&page=1`;
+window.onload = async function (event) {
+	const configURL = `${baseURL}configuration?api_key=${apiKey}`;
 
-// 	const response = await fetch(nowPlayingApiURL);
-// 	const responseData = await response.json();
+	const configResponse = await fetch(configURL);
+	const configResponseData = await configResponse.json();
 
-// 	console.log(responseData);
+	console.log(configResponseData);
 
-// 	responseData.results.forEach((element) => {
-// 		const image = `https://api.themoviedb.org/3/movie/${element.id}/images?api_key=${apiKey}&language=en-US`;
-// 		console.log(image);
-// 		movieContent.innerHTML += `
-//         <img class="moviePoster" src="${image}" alt="${element.title}" />
-//         <h3>${element.title}</h3>
-// 		`;
-// 	});
-// };
+	const baseImageURL = configResponseData.images.secure_base_url;
+
+	const nowPlayingApiURL = `${baseURL}movie/now_playing?api_key=${apiKey}&language=en-US&page=1`;
+
+	const response = await fetch(nowPlayingApiURL);
+	const responseData = await response.json();
+
+	console.log(responseData);
+
+	responseData.results.forEach((element) => {
+		let image = `${baseImageURL}original${element.poster_path}`;
+		movieContent.innerHTML += `
+        <img class="moviePoster" src="${image}" alt="${element.title}" />
+        <!-- <h3>${element.title}</h3> -->
+		`;
+	});
+};
