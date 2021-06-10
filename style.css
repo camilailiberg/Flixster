@@ -74,8 +74,8 @@ body {
 	justify-content: center;
 	padding: 20px 0 20px 0;
 }
-.load-more-button {
-}
+/* .load-more-button {
+} */
 
 .footer {
 	display: flex;
@@ -94,5 +94,5 @@ body {
 .hidden {
 	display: none;
 }
-.search-button {
-}
+/* .search-button {
+} */
