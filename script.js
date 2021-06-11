@@ -79,8 +79,29 @@ async function lodeMoreSpecific(event) {
                     <h3>${element.vote_average}</h3>
                 </div>
             </div>
-            <button class="btn btn-light more-info-btn">More Info</button>
+            <button class="btn btn-light more-info-btn-specific-movie">More Info</button>
         </div>
+		<div class="pop-up" id="${element.id}">
+				<div class="modal-header">
+					<div class="modal-title">
+						${element.title}
+					</div>
+					<button class="modal-close-btn">&times;</button>
+				</div>
+				<div class="modal-body">
+					
+						<img class="moviePosterPopUp" src="${image}" alt="${element.title}" />
+						<div class="pop-up-details-minus-image">
+							<p>${element.release_date}</p>
+							<div class="star-and-rating">
+								<img class="star-rating" src="/images/star.png" alt="star-rating" />
+								<h3>${element.vote_average}</h3>
+							</div>
+							<p>${element.overview}</p>
+						<div/>
+					
+				</div>
+		</div>
     `;
 	});
 }
@@ -119,19 +140,9 @@ async function loadMore() {
 	console.log(responseData);
 
 	// for each movie in results
-	responseData.results.forEach(async (element) => {
+	responseData.results.forEach((element) => {
 		// get the poster
 		let image = `${baseImageURL}original${element.poster_path}`;
-		//// let videoAPIURL = `https://api.themoviedb.org/3/movie/${element.id}/videos?api_key=${apiKey}&language=en-US`;
-
-		// // fetching the info for now specific movie video
-		//// let videoResponse = await fetch(videoAPIURL);
-		// // puttin info for specific movie video in JSON
-		//// let videoResponseData = await videoResponse.json();
-
-		//// console.log("video response:" + videoResponseData[0]);
-
-		// // https://api.themoviedb.org/3/movie/337404/videos?api_key=3e5775f6559acd9fc0c12c6586928764&language=en-US
 
 		//display the poster, title, and rating for each movie to the user
 		movieContent.innerHTML += `
@@ -144,9 +155,30 @@ async function loadMore() {
                     <h3>${element.vote_average}</h3>
                 </div>
             </div>
-            <button class="btn btn-light more-info-btn">More Info</button>
+            <button class="btn btn-light more-info-btn" data-movie-id=${element.id}>More Info</button>
             <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/gmRKv7n2If8" frameborder="0" allow+"autoplay; encypted-media" allowfullscreen></iframe> -->
         </div>
+		<div class="pop-up" id="${element.id}">
+				<div class="modal-header">
+					<div class="modal-title">
+						${element.title}
+					</div>
+					<button class="modal-close-btn">&times;</button>
+				</div>
+				<div class="modal-body">
+					
+						<img class="moviePosterPopUp" src="${image}" alt="${element.title}" />
+						<div class="pop-up-details-minus-image">
+							<p>${element.release_date}</p>
+							<div class="star-and-rating">
+								<img class="star-rating" src="/images/star.png" alt="star-rating" />
+								<h3>${element.vote_average}</h3>
+							</div>
+							<p>${element.overview}</p>
+						<div/>
+					
+				</div>
+		</div>
         `;
 	});
 
@@ -232,9 +264,30 @@ async function runSearch(movie, baseImageURL) {
                     <img class="star-rating" src="/images/star.png" alt="star-rating" />
                     <h3>${element.vote_average}</h3>
                 </div>
-                <button class="btn btn-light more-info-btn">More Info</button>
+                <button class="btn btn-light more-info-btn-specific-movie">More Info</button>
             </div>
         </div>
+		<div class="pop-up" id="${element.id}">
+				<div class="modal-header">
+					<div class="modal-title">
+						${element.title}
+					</div>
+					<button class="modal-close-btn">&times;</button>
+				</div>
+				<div class="modal-body">
+					
+						<img class="moviePosterPopUp" src="${image}" alt="${element.title}" />
+						<div class="pop-up-details-minus-image">
+							<p>${element.release_date}</p>
+							<div class="star-and-rating">
+								<img class="star-rating" src="/images/star.png" alt="star-rating" />
+								<h3>${element.vote_average}</h3>
+							</div>
+							<p>${element.overview}</p>
+						<div/>
+					
+				</div>
+		</div>
     `;
 	});
 }
@@ -248,20 +301,33 @@ document.onclick = function (event) {
 
 	if (target.classList.contains("more-info-btn")) {
 		console.log("hello world");
+		console.log("Event: " + event);
 		const divParentIndividualMovie = event.target.parentElement;
+		const popUp = divParentIndividualMovie.nextElementSibling;
 		const divParentContent = divParentIndividualMovie.parentElement;
-		const modalSiblingOfParentContent = divParentContent.nextElementSibling;
-		const overlaylSiblingOfModal =
-			modalSiblingOfParentContent.nextElementSibling;
-		overlaylSiblingOfModal.classList.add("active");
-		modalSiblingOfParentContent.classList.add("active");
+		const overlay = divParentContent.nextElementSibling;
+		// overlay.classList.add("active");
+		popUp.classList.add("active");
+	}
+
+	if (target.classList.contains("more-info-btn-specific-movie")) {
+		console.log("hello world");
+		console.log("Event: " + event);
+		const divParentIndividualMovie = event.target.parentElement;
+		const notpopUp = divParentIndividualMovie.nextElementSibling;
+		const divParentContent = divParentIndividualMovie.parentElement;
+		const popUp = divParentContent.nextElementSibling;
+		const overlay = popUp.parentElement.nextElementSibling;
+		popUp.classList.add("active");
+		// overlay.classList.add("active");
 	}
 
 	if (target.classList.contains("modal-close-btn")) {
 		const modalHeader = target.parentElement;
 		const popUp = modalHeader.parentElement;
-		const overlay = popUp.nextElementSibling;
-		overlay.classList.remove("active");
+		const content = popUp.parentElement;
+		const overlay = content.nextElementSibling;
+		// overlay.classList.remove("active");
 		popUp.classList.remove("active");
 	}
 };
