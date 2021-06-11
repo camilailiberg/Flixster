@@ -79,7 +79,7 @@ async function lodeMoreSpecific(event) {
                     <h3>${element.vote_average}</h3>
                 </div>
             </div>
-			<button class="btn btn-light more-info-btn">More Info</button>
+            <button class="btn btn-light more-info-btn">More Info</button>
         </div>
     `;
 	});
@@ -144,10 +144,10 @@ async function loadMore() {
                     <h3>${element.vote_average}</h3>
                 </div>
             </div>
-			<button class="btn btn-light more-info-btn">More Info</button>
-			<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/gmRKv7n2If8" frameborder="0" allow+"autoplay; encypted-media" allowfullscreen></iframe> -->
+            <button class="btn btn-light more-info-btn">More Info</button>
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/gmRKv7n2If8" frameborder="0" allow+"autoplay; encypted-media" allowfullscreen></iframe> -->
         </div>
-		`;
+        `;
 	});
 
 	// increase pageGeneral so that when the user clicks on load more button it loads the next page movies into the FLIXTER app
@@ -232,7 +232,7 @@ async function runSearch(movie, baseImageURL) {
                     <img class="star-rating" src="/images/star.png" alt="star-rating" />
                     <h3>${element.vote_average}</h3>
                 </div>
-				<button class="btn btn-light more-info-btn">More Info</button>
+                <button class="btn btn-light more-info-btn">More Info</button>
             </div>
         </div>
     `;

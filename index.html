@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Flixter</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flixter</title>
 
-		<!-- Link for Bootstrap -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <!-- Link for Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-		<!-- Google Fonts Links -->
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Public+Sans:ital@1&display=swap"
-			rel="stylesheet"
-		/>
+        <!-- Google Fonts Links -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Public+Sans:ital@1&display=swap"
+            rel="stylesheet"
+        />
 
-		<!-- Linking style.css file -->
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="flex-container">
-			<div class="image-title-searchbar">
-				<a href="/">
-					<img class="popcorn" src="/images/popcorn.png" alt="popcorn logo" />
-				</a>
+        <!-- Linking style.css file -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="image-title-searchbar">
+                <a href="/">
+                    <img class="popcorn" src="/images/popcorn.png" alt="popcorn logo" />
+                </a>
 
-				<h1 class="name">FLIXTER</h1>
+                <h1 class="name">FLIXTER</h1>
 
-				<div class="form d-flex">
-					<form id="movieForm">
-						<input class="search-input" name="movieName" required="required" type="text" />
-						<button class="search-button btn btn-light" type="submit">Search</button>
-					</form>
-				</div>
-			</div>
+                <div class="form d-flex">
+                    <form id="movieForm">
+                        <input class="search-input" name="movieName" required="required" type="text" />
+                        <button class="search-button btn btn-light" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
 
-			<h2 class="type-showing"></h2>
+            <h2 class="type-showing"></h2>
 
-			<div class="content"></div>
+            <div class="content"></div>
 
-			<div class="pop-up" id="modal">
-				<div class="modal-header">
-					<div class="modal-title">
-						Movei Title
-					</div>
-					<button class="modal-close-btn">&times;</button>
-				</div>
-				<div class="modal-body">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, iste facilis animi eligendi a necessitatibus voluptatem suscipit velit aut sunt? Recusandae aliquam quasi debitis quia deserunt, sunt corporis vitae eligendi optio, error consectetur. Nostrum perferendis cumque cum! Libero expedita deleniti quas quisquam nesciunt voluptatem cumque ullam amet culpa aperiam magnam aut perspiciatis aliquam nostrum quasi obcaecati, consequatur vero cum, explicabo vel repellendus, illo omnis. Odit atque, minima, quo nesciunt amet ipsam consequatur rem quasi nostrum sit nulla minus vero? Nihil?
-				</div>
-			</div>
-			
-			<div id="overlay" class=""></div> 
+            <div class="pop-up" id="modal">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        Movei Title
+                    </div>
+                    <button class="modal-close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, iste facilis animi eligendi a necessitatibus voluptatem suscipit velit aut sunt? Recusandae aliquam quasi debitis quia deserunt, sunt corporis vitae eligendi optio, error consectetur. Nostrum perferendis cumque cum! Libero expedita deleniti quas quisquam nesciunt voluptatem cumque ullam amet culpa aperiam magnam aut perspiciatis aliquam nostrum quasi obcaecati, consequatur vero cum, explicabo vel repellendus, illo omnis. Odit atque, minima, quo nesciunt amet ipsam consequatur rem quasi nostrum sit nulla minus vero? Nihil?
+                </div>
+            </div>
+            
+            <div id="overlay" class=""></div> 
 
-			<div class="load-more">
-				<button onclick="loadMore()" class="btn btn-light load-more-button general">
-					Load More
-				</button>
-				<button class="load-more-button specific hidden">Load More</button>
-			</div>
+            <div class="load-more">
+                <button onclick="loadMore()" class="btn btn-light load-more-button general">
+                    Load More
+                </button>
+                <button class="load-more-button specific hidden">Load More</button>
+            </div>
 
-			<div class="footer">
-				<img class="logo" src="/images/logo.svg" alt="source-logo" />
-			</div>
-		</div>
+            <div class="footer">
+                <img class="logo" src="/images/logo.svg" alt="source-logo" />
+            </div>
+        </div>
 
-		</div>
+        </div>
 
-		<!-- bootstrap info -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"></script>
+        <!-- bootstrap info -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
-		<!-- linking JavaScript file -->
-		<script src="script.js"></script>
-	</body>
+        <!-- linking JavaScript file -->
+        <script src="script.js"></script>
+    </body>
 </html>
