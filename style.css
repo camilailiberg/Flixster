@@ -136,8 +136,8 @@ body {
 	margin: 40px;
 	justify-content: space-between;
 }
-.more-info-btn {
-}
+/* .more-info-btn {
+} */
 .moviePoster {
 	height: 200px;
 	width: 200px;
@@ -163,8 +163,8 @@ body {
 	justify-content: space-between;
 }
 
-.movie-details {
-}
+/* .movie-details {
+} */
 
 .load-more {
 	display: flex;

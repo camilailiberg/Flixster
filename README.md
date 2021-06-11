@@ -1,8 +1,8 @@
 ## Week 1 Assignment: Flixster
 
-Submitted by: **NAME**
+Submitted by: Camila iligaray
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: 20 hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
@@ -10,12 +10,12 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 #### REQUIRED FEATURES
 
-- [ ] User can view a list of current movies from The Movie Database API as a grid view.
-- [ ] For each movie displayed, user can see the following details: `Title`, `Poster Image`, `Votes`.
-- [ ] User can load more current movies by clicking a button at the bottom of the list. The page should not refresh; movies should simply be added to the bottom.
-- [ ] Allow users to search for movies and display them in a grid view. Users should be able to clear results and view previous current movies displayed.
-- [ ] Website accounts for basic HTML/CSS accessibility features.
-- [ ] Website should be responsive.
+- [X] User can view a list of current movies from The Movie Database API as a grid view.
+- [X] For each movie displayed, user can see the following details: `Title`, `Poster Image`, `Votes`.
+- [X] User can load more current movies by clicking a button at the bottom of the list. The page should not refresh; movies should simply be added to the bottom.
+- [X] Allow users to search for movies and display them in a grid view. Users should be able to clear results and view previous current movies displayed.
+- [X] Website accounts for basic HTML/CSS accessibility features.
+- [X] Website should be responsive.
 
 #### STRETCH FEATURES
 
@@ -23,7 +23,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 - [ ] Allow user to view more details about a movie within a popup.
 - [ ] Improve the user experience through CSS & animation.
 - [ ] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
-- [ ] Implement anything else that you can get done to improve the app functionality!
+- [X] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthough GIF
 
@@ -47,8 +47,4 @@ Add your response here
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
-
-### Shout out
-
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+### Shout out to Matt for giving me resources to read and look at to.
