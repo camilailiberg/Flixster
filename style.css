@@ -5,7 +5,7 @@ body {
 	font-family: "Public Sans", sans-serif;
 }
 
-.modal {
+.pop-up {
 	position: fixed; /* as the user scrols up and dow i want the modal to follow the user always*/
 
 	/* thi will make the modal completelly centered */
@@ -29,7 +29,7 @@ body {
 	/* max-height: 95%; */
 	/* the modal will never be taller than 80% of our screen */
 }
-.modal.active {
+.pop-up.active {
 	transform: translate(-50%, -50%) scale(1);
 }
 .modal-header {
