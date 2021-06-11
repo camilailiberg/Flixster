@@ -1,3 +1,5 @@
+// comment to try make the correct info load in github pages
+
 //loading to console
 console.log("page loaded");
 
